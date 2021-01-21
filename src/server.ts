@@ -10,5 +10,4 @@ app.use('/api', routes);
 app.listen(3333, () => {
   console.log("[server] -> starting!");
   console.log("[server] -> Server started at http://localhost:3333/api");
-  
 })
