@@ -1,7 +1,10 @@
 {
-  "name": "API-loginapp",
+  "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "dev": "npx nodemon --exec ts-node src/server.ts"
+  },
   "repository": "https://github.com/eduardomantz291/API-loginapp.git",
   "author": "eduardomantz291 <eduardomantz2112@gmail.com>",
   "license": "MIT",
