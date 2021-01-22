@@ -2,6 +2,7 @@
   "type": "mongodb",
   "host": "localhost",
   "port": 27017,
+  "useUnifiedTopology": true,
   "database": "LoginAppApi",
   "entities": [
      "src/entity/**/*.ts"
