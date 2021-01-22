@@ -4,8 +4,21 @@ import { getRepository } from 'typeorm';
 import User from '../entity/models/User';
 
 class UserController {
-  store(req: Request, res: Response) {
-    const UserRepository = getRepository()  
+  async store(req: Request, res: Response) {
+    const UserRepository = getRepository(User);
+    const { name, email, password } = req.body;
+
+    const userExists = await UserRepository.findOne({ where: { email } });
+
+    if (userExists) {
+      return res.sendStatus(409);
+    }
+
+    const user = UserRepository.create({ name, email, password });
+
+    await UserRepository.save(user);
+
+    return res.json(user);
   } 
 }
 

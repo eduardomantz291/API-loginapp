@@ -4,9 +4,9 @@
   "port": 3306,
   "username": "root",
   "password": "eduardo123",
-  "database": "LoginApi",
+  "database": "loginapidb",
   "entities": [
-     "src/entity/modal/*.ts"
+     "src/entity/models/*.ts"
   ],
   "migrations": [
      "src/database/migrations/*.ts"
