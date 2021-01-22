@@ -1,14 +1,15 @@
 {
-  "type": "mongodb",
+  "type": "mysql",
   "host": "localhost",
-  "port": 27017,
-  "useUnifiedTopology": true,
-  "database": "LoginAppApi",
+  "port": 3306,
+  "username": "root",
+  "password": "eduardo123",
+  "database": "LoginApi",
   "entities": [
-     "src/entity/**/*.ts"
+     "src/entity/modal/*.ts"
   ],
   "migrations": [
-     "src/migration/**/*.ts"
+     "src/database/migrations/*.ts"
   ],
   "cli": {
     "migrationsDir": "src/database/migrations"
