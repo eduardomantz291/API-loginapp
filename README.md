@@ -44,9 +44,6 @@ yarn dev
 # Run migrations
 yarn typeorm migration:run
 
-# Create migration
-yarn typeorm migration:create -n <migration-name>
-
 # Undo migration
 yarn typeorm migration:revert
 ```
