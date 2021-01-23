@@ -13,13 +13,13 @@ class AuthController {
     const user = await UserRepository.findOne({ where: { email } });
 
     if (!user) {
-      return res.sendStatus(401);
+      return res.send({ mensage: 'there is no user with this email' });
     }
 
     const isValidPassword = await bcrypt.compare(password, user.password);
 
     if (!isValidPassword) {
-      return res.sendStatus(401);
+      return res.send({ mensage: 'Oops! password is wrong' });
     }
 
     const token = jwt.sign({ id: user.id }, 'secret', { expiresIn: '1d' });

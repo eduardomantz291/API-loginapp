@@ -15,7 +15,7 @@ class UserController {
     const userExists = await UserRepository.findOne({ where: { email } });
 
     if (userExists) {
-      return res.sendStatus(409);
+      return res.send({ mensage: 'this email is already being used' })
     }
 
     const user = UserRepository.create({ name, email, password });
