@@ -25,3 +25,36 @@
 
   <img alt="Github last commit" src="https://img.shields.io/github/last-commit/eduardomantz291/API-loginapp">
 </p>
+
+## :bulb: About Project
+
+Using <span style="color:lightgreen; font-weight:bold;">NodeJS</span> with <span style="color:darkslateblue; font-weight:bold;">Typescript</span> to make a **LoginApp application**, this API was developed for my study of **Typescript, Typeorm and JsonWebToken**.
+
+## :gear: Getting Started
+
+```Bash
+# Install dependencies
+yarn install
+
+# Run application
+yarn dev
+
+# Useful commands (OPTIONAL)
+
+# Run migrations
+yarn typeorm migration:run
+
+# Create migration
+yarn typeorm migration:create -n <migration-name>
+
+# Undo migration
+yarn typeorm migration:revert
+```
+
+## 🚀 Technologies used
+
+The project is developed using the following technologies:
+- [Express](https://expressjs.com/)
+- [Typeorm](https://typeorm.io/)
+- [JsonWebToken](https://jwt.io/)
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
